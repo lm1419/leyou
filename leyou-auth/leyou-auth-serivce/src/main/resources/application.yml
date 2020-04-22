@@ -1,0 +1,23 @@
+server:
+  port: 8087
+spring:
+  application:
+    name: auth-service
+  main:
+    allow-bean-definition-overriding: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+      #拉取服务的时间，在远程调用服务的时候配置
+    registry-fetch-interval-seconds: 10
+  instance:
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 15
+leyou:
+  jwt:
+    secret: leyou@Log1in(Auth}*^31)&heiMa% # 登录校验的密钥
+    pubKeyPath: C:\\tmp\\rsa\\rsa.pub # 公钥地址
+    priKeyPath: C:\\tmp\\rsa\\rsa.pri # 私钥地址
+    expire: 30 # 过期时间,单位分钟
+    cookieName: LY_TOKEN
