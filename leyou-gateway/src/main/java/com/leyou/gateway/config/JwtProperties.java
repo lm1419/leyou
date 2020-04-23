@@ -1,4 +1,4 @@
-package com.leyou.config;
+package com.leyou.gateway.config;
 
 import com.leyou.common.utils.RsaUtils;
 import org.slf4j.Logger;
@@ -58,7 +58,7 @@ public class JwtProperties {
      * @PostContruct：在构造方法执行之后执行该方法
      */
     @PostConstruct
-    public void init(){
+    public void init() {
         try {
             File pubKey = new File(pubKeyPath);
             // 获取公钥和私钥
