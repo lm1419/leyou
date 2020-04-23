@@ -2,13 +2,17 @@ package com.leyou.auth.controller;
 
 import com.leyou.auth.config.JwtProperties;
 import com.leyou.auth.service.AuthService;
+import com.leyou.common.pojo.UserInfo;
 import com.leyou.common.utils.CookieUtils;
+import com.leyou.common.utils.JwtUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CookieValue;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -38,5 +42,27 @@ public class AuthController {
         }
         CookieUtils.setCookie(request,response,jwtProperties.getCookieName(),token,jwtProperties.getExpire()*60);
         return ResponseEntity.ok().build();
+    }
+
+    @GetMapping("verify")
+    public ResponseEntity<UserInfo> verify(@CookieValue("LY_TOKEN")String token,
+                                           HttpServletRequest request,
+                                           HttpServletResponse response){
+        UserInfo user = null;
+        try {
+            // 通过jwt的工具类解析jwt
+            user = JwtUtils.getInfoFromToken(token, jwtProperties.getPublicKey());
+            if (user==null){
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+            }
+            // 刷新jwt的有效时间
+            token = JwtUtils.generateToken(user, jwtProperties.getPrivateKey(), this.jwtProperties.getExpire());
+            // 刷新cookie的有效时间
+            CookieUtils.setCookie(request,response,jwtProperties.getCookieName(),token,jwtProperties.getExpire()*60);
+            return ResponseEntity.ok(user);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
     }
 }

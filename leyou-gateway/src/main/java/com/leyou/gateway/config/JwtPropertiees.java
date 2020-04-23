@@ -4,15 +4,13 @@ import com.leyou.common.utils.RsaUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import java.io.File;
 import java.security.PublicKey;
 
-@Component
 @ConfigurationProperties(prefix = "leyou.jwt")
-public class JwtProperties {
+public class JwtPropertiees {
 
 
     private String pubKeyPath;// 公钥
@@ -21,7 +19,7 @@ public class JwtProperties {
 
     private String cookieName;
 
-    private static final Logger logger = LoggerFactory.getLogger(JwtProperties.class);
+    private static final Logger logger = LoggerFactory.getLogger(JwtPropertiees.class);
 
 
     public String getPubKeyPath() {
