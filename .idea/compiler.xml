@@ -15,9 +15,11 @@
         <module name="leyou-user-service" />
         <module name="leyou-common" />
         <module name="leyou-registry" />
+        <module name="leyou-cart" />
         <module name="leyou-item-interface" />
         <module name="leyou-search" />
         <module name="leyou-auth-serivce" />
+        <module name="leyou-order" />
         <module name="leyou-user-interface" />
         <module name="leyou-sms" />
       </profile>
@@ -32,12 +34,14 @@
       <module name="leyou-auth" options="-parameters" />
       <module name="leyou-auth-common" options="-parameters" />
       <module name="leyou-auth-serivce" options="-parameters" />
+      <module name="leyou-cart" options="-parameters" />
       <module name="leyou-common" options="-parameters" />
       <module name="leyou-gateway" options="-parameters" />
       <module name="leyou-goods-web" options="-parameters" />
       <module name="leyou-item" options="-parameters" />
       <module name="leyou-item-interface" options="-parameters" />
       <module name="leyou-item-service" options="-parameters" />
+      <module name="leyou-order" options="-parameters" />
       <module name="leyou-registry" options="-parameters" />
       <module name="leyou-search" options="-parameters" />
       <module name="leyou-sms" options="-parameters" />

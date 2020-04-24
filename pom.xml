@@ -9,6 +9,7 @@
     <version>1.0.0-SNAPSHOT</version>
     <modules>
         <module>leyou-registry</module>
+        <module>leyou-order</module>
         <module>leyou-gateway</module>
         <module>leyou-item</module>
         <module>leyou-common</module>
@@ -18,6 +19,7 @@
         <module>leyou-user</module>
         <module>leyou-sms</module>
         <module>leyou-auth</module>
+        <module>leyou-cart</module>
     </modules>
     <packaging>pom</packaging>
 

@@ -59,10 +59,12 @@ public class AuthController {
             token = JwtUtils.generateToken(user, jwtProperties.getPrivateKey(), this.jwtProperties.getExpire());
             // 刷新cookie的有效时间
             CookieUtils.setCookie(request,response,jwtProperties.getCookieName(),token,jwtProperties.getExpire()*60);
+            System.out.println("ok");
             return ResponseEntity.ok(user);
         } catch (Exception e) {
             e.printStackTrace();
         }
+        System.out.println("bug");
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
     }
 }

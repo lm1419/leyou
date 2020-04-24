@@ -5,6 +5,7 @@
     <file url="file://$PROJECT_DIR$/leyou-auth/leyou-auth-serivce/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/leyou-auth/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/leyou-auth/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leyou-cart/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/leyou-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/leyou-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/leyou-goods-web/src/main/java" charset="UTF-8" />
@@ -12,6 +13,8 @@
     <file url="file://$PROJECT_DIR$/leyou-item/leyou-tiem-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/leyou-item/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/leyou-item/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leyou-order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leyou-order/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/leyou-registry/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/leyou-search/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/leyou-sms/src/main/java" charset="UTF-8" />
